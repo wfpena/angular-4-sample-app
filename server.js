@@ -1,6 +1,15 @@
 //Install express server
 const express = require('express');
 const path = require('path');
+const fs = require('fs');
+
+var str1 = "Hello";
+fs.readdir(testFolder, (err, files) => {
+  files.forEach(file => {
+    str1.concat(file + "\n");
+    console.log(file);
+  });
+})
 
 const app = express();
 
@@ -8,7 +17,8 @@ const app = express();
 app.use(express.static(__dirname + '/dist/angular-app'));
 
 app.get('/*', function(req,res) {
-res.send('string');
+  
+res.send('string' + str1);
 //res.sendFile(path.join(__dirname+'/dist/angular-app/index.html'));
 });
 
