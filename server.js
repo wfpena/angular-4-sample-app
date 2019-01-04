@@ -20,7 +20,7 @@ var str1 = "Hello" + path.join('./') + fs.existsSync(path.join('./');
 const app = express();
 
 // Serve only the static files form the dist directory
-app.use(express.static(__dirname + '/dist/angular-app'));
+//app.use(express.static(__dirname + '/dist/angular-app'));
 
 app.get('/*', function(req,res) {
   
