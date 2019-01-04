@@ -4,7 +4,7 @@ const path = require('path');
 const fs = require('fs');
 
 var str1 = "Hello";
-fs.readdir(testFolder, (err, files) => {
+fs.readdir('./', (err, files) => {
   files.forEach(file => {
     str1.concat(file + "\n");
     console.log(file);
