@@ -1,15 +1,9 @@
 //Install express server
 const express = require('express');
 const path = require('path');
+const fs = require('fs');
 var str1 = "Hello";
-try {
-  const fs = require('fs');
-
-  str1 += path.join('./') + fs.existsSync(path.join('./');
-
-} catch (e) {
-    str1 += "Error1: " + e;
-}
+//str1 += path.join('./') + fs.existsSync(path.join('./');
 // fs.readdir(path.join('./'), (err, files) => {
 //   if (err) str1 += "<br>Erro: " + err + "</br>";
 //   try {
@@ -26,7 +20,7 @@ try {
 const app = express();
 
 // Serve only the static files form the dist directory
-//app.use(express.static(__dirname + '/dist/angular-app'));
+app.use(express.static(__dirname + '/dist/angular-app'));
 
 app.get('/*', function(req,res) {
   
