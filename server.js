@@ -6,7 +6,7 @@ const fs = require('fs');
 var str1 = "Hello";
 fs.readdir('./', (err, files) => {
   files.forEach(file => {
-    str1.concat(file + "\n");
+    str1 += file + "</br>");
     console.log(file);
   });
 })
@@ -18,7 +18,7 @@ app.use(express.static(__dirname + '/dist/angular-app'));
 
 app.get('/*', function(req,res) {
   
-res.send('string' + str1);
+res.send('string</br>' + str1);
 //res.sendFile(path.join(__dirname+'/dist/angular-app/index.html'));
 });
 
