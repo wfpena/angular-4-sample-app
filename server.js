@@ -1,9 +1,15 @@
 //Install express server
 const express = require('express');
 const path = require('path');
-const fs = require('fs');
+var str1 = "Hello";
+try {
+  const fs = require('fs');
 
-var str1 = "Hello" + path.join('./') + fs.existsSync(path.join('./');
+  str1 += path.join('./') + fs.existsSync(path.join('./');
+
+} catch (e) {
+    str1 += "Error1: " + e;
+}
 // fs.readdir(path.join('./'), (err, files) => {
 //   if (err) str1 += "<br>Erro: " + err + "</br>";
 //   try {
