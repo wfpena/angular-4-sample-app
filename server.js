@@ -3,6 +3,9 @@ const express = require('express');
 const path = require('path');
 const fs = require('fs');
 var str1 = "Hello";
+if (fs.existsSync(path.join('./')) {
+    str1 += " Here";
+}
 //str1 += path.join('./') + fs.existsSync(path.join('./');
 // fs.readdir(path.join('./'), (err, files) => {
 //   if (err) str1 += "<br>Erro: " + err + "</br>";
